@@ -30,9 +30,9 @@ resource "aws_security_group" "web_sg" {
 resource "aws_instance" "app" {
   ami           = "ami-0ec10929233384c7f"
   instance_type = "t2.micro"
-  key_name      = "devops-key"   # must exist in AWS
+  key_name      = "devops-key"   
 
-  security_groups = [aws_security_group.web_sg.name]
+  vpc_security_group_ids = [aws_security_group.web_sg.id]
 
   tags = {
     Name = "devops-assignment-7"
