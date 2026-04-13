@@ -46,7 +46,7 @@ resource "aws_security_group" "web_sg" {
 resource "aws_instance" "app" {
   ami           = "ami-0ec10929233384c7f"
   instance_type = "t2.micro"
-  key_name      = "devops-key"
+  key_name      = "activity-9"
 
   subnet_id = data.aws_subnets.default.ids[0]
 
