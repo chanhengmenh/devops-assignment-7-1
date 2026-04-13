@@ -20,12 +20,13 @@ pipeline {
                     usernameVariable: 'USER',
                     passwordVariable: 'PASS'
                 )]) {
+                    sh 'echo "Logging into Docker..."'
                     sh 'echo $PASS | docker login -u $USER --password-stdin'
                     sh 'docker push $IMAGE'
                 }
             }
         }
-
+        
         stage('Provision EC2') {
             steps {
                 dir('terraform') {
