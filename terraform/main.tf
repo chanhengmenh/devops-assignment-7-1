@@ -28,7 +28,7 @@ resource "aws_security_group" "web_sg" {
 }
 
 resource "aws_instance" "app" {
-  ami           = "ami-0df7a207adb9748c7"
+  ami           = "ami-0ec10929233384c7f"
   instance_type = "t2.micro"
   key_name      = "devops-key"   # must exist in AWS
 
