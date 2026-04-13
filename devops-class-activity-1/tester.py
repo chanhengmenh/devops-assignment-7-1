@@ -1,1 +1,0 @@
-print("lorem ipsum dolor sit amet")
